@@ -1,0 +1,57 @@
+/* Arabic / RTL layer on top of the template */
+:root{--_font---font-family--primary:'Cairo','Tahoma',sans-serif;--font:'Cairo','Tahoma',sans-serif}
+html,body,button,input,textarea,select,h1,h2,h3,h4,h5,h6,p,a,div,span{font-family:'Cairo','Tahoma','Segoe UI',sans-serif!important;letter-spacing:0!important}
+html[dir=rtl] body{text-align:right}
+h1,h2,h3{line-height:1.3!important}
+.location_maplink{display:block}
+.team_list{display:flex!important;justify-content:center}
+.section_team{background:#eef8f8!important;background-image:none!important}
+.section_team .home-team_header-title,.section_team h2{color:#011f23!important;text-shadow:none!important}
+.section_team .home-team_header-para,.section_team .about-team_para{color:#4a6366!important;text-shadow:none!important}
+.section_team .text-highlighted{color:#24a3b1!important}
+.section_team .section_tag{background:#dcecee!important;color:#011f23!important}
+.section_team .section_tag svg,.section_team .section_tag path{color:#011f23!important;fill:#011f23!important}
+.team_list .w-dyn-item{width:100%;max-width:420px}
+.hero_gradient{left:50%!important;right:auto!important}
+.w-slider,.w-slider-mask,.marquee_list{direction:ltr}
+.service_wrap,.scroll_track,.scroll_track .scroll_list,.scroll_track .w-dyn-list,.scroll_track .w-dyn-items{direction:ltr}
+.scroll_track .w-dyn-item,.w-slide,.marquee-item_inner,.w-slider-arrow-left,.w-slider-arrow-right{direction:rtl}
+.logo_image,.brand_logo{width:auto!important;max-width:none!important}
+
+/* ===== قسم نتائج قبل وبعد ===== */
+.section_cases{background:#011f23;color:#fff}
+.section_cases h2,.section_cases .body-text-18px{color:#fff}
+.section_cases .body-text-18px{opacity:.8;max-width:560px}
+.cases_list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cases_item{display:block;width:100%;aspect-ratio:1/1;padding:0;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#0a3036;overflow:hidden;cursor:zoom-in}
+.cases_item img{display:block;width:100%;height:100%;object-fit:contain}
+.cases_item:focus-visible,.cases_btn:focus-visible,.cases_close:focus-visible{outline:3px solid #7fe3ef;outline-offset:3px}
+.cases_cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
+.cases_cta p{margin:0;font-size:18px;color:#fff}
+.cases_btn{display:inline-block;padding:14px 28px;border-radius:99px;background:#24a3b1;color:#011f23;font-weight:700;text-decoration:none}
+.cases_btn:hover{background:#7fe3ef}
+.cases_dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1000px);max-height:94vh;overflow:visible}
+.cases_dialog::backdrop{background:rgba(1,31,35,.88)}
+.cases_dialog img{display:block;max-width:100%;max-height:90vh;margin:auto;border-radius:16px;cursor:zoom-out}
+.cases_close{position:absolute;top:-14px;inset-inline-start:-14px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#011f23;font-size:28px;line-height:1;cursor:pointer}
+@media (max-width:767px){.cases_list{grid-template-columns:1fr;max-width:520px}.cases_cta{flex-direction:column;align-items:stretch;text-align:center}}
+
+/* ===== قسم الموقع (خريطة جوجل) ===== */
+.section_clinicmap{background:#eef8f8;color:#011f23}
+.section_clinicmap h2{color:#011f23!important;text-shadow:none!important}
+.section_clinicmap .body-text-18px{color:#4a6366!important}
+.section_clinicmap .text-highlighted{color:#24a3b1!important}
+.section_clinicmap .section_tag{background:#dcecee!important;color:#011f23!important}
+.section_clinicmap .section_tag svg,.section_clinicmap .section_tag path{color:#011f23!important;fill:#011f23!important}
+.clinicmap_grid{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:stretch}
+.clinicmap_frame{border-radius:24px;overflow:hidden;min-height:420px;background:#dcecee;border:1px solid #cfe3e5}
+.clinicmap_frame iframe{display:block;width:100%;height:100%;min-height:420px;border:0}
+.clinicmap_info{display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:24px;background:#fff;border:1px solid #cfe3e5}
+.clinicmap_name{font-size:22px;font-weight:700;line-height:1.4}
+.clinicmap_addr{margin:0;color:#4a6366;font-size:16px}
+.clinicmap_coords{margin:0 0 8px;color:#4a6366;font-size:14px;text-align:right}
+.clinicmap_btn{display:block;padding:13px 20px;border-radius:99px;border:1px solid #24a3b1;color:#011f23;text-align:center;font-weight:700;text-decoration:none}
+.clinicmap_btn.is-main{background:#24a3b1}
+.clinicmap_btn:hover{background:#011f23;color:#fff;border-color:#011f23}
+.clinicmap_btn:focus-visible{outline:3px solid #011f23;outline-offset:3px}
+@media (max-width:991px){.clinicmap_grid{grid-template-columns:1fr}.clinicmap_frame,.clinicmap_frame iframe{min-height:340px}}
